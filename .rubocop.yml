@@ -16,6 +16,7 @@ AllCops:
     - Gemfile
     - Guardfile
     - Rakefile
+    - app/helpers/javascript_helper.rb
 
 Layout/SpaceAroundEqualsInParameterDefault:
   EnforcedStyle: no_space
@@ -34,6 +35,7 @@ Metrics/ClassLength:
     - "test/**/*"
 
 Metrics/LineLength:
+  Max: 100
   Exclude:
     - "config/**/*"
     - "db/**/*"

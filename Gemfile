@@ -21,7 +21,7 @@ gem "rails", "~> 5.2.2.1"
 gem "sass-rails", "~> 5.0"
 gem "sidekiq", ">= 4.2.0"
 gem "turbolinks", "~> 5"
-
+gem 'devise'
 
 group :development do
   gem "annotate", ">= 2.5.0"
