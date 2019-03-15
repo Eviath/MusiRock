@@ -1,3 +1,23 @@
-= render("shared/flash")
-= yield
-- parent_layout "base"
+!!!
+%html
+  %head
+    / Musi Rock <haml_loud> Rails.application.config.version </haml_loud> (<haml_loud> l(Rails.application.config.version_time) </haml_loud>)
+    = stylesheet_link_tag("application",media: "all", "data-turbolinks-track" => "reload")
+    = javascript_include_tag("application", "data-turbolinks-track" => "reload")
+    %meta{:charset => "utf-8"}
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+    %meta{:content => "MusiRock", :name => "apple-mobile-web-app-title"}
+    = csrf_meta_tags
+    = csp_meta_tag
+    %title
+      = strip_tags(yield(:title)) + " – " if content_for?(:title)
+      MusiRock
+
+  %body
+    = render "layouts/navbar"
+    = render("shared/flash")
+    = yield
+
+
+
+

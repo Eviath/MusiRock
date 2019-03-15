@@ -1,0 +1,36 @@
+.ui.segment.musirock_menu
+  .ui.secondary.menu
+
+    .left.menu
+    .item
+      %h1 MUSIROCK
+
+    =active_link_to 'Home', root_path, class:'item'
+    %a.item
+      Featured
+    %a.item
+      Collection
+
+    .right.menu
+      .item
+        .ui.icon.input
+          %input{type:"text", placeholder:"Search..."}
+          %i.search.link.icon
+
+      -if !user_signed_in?
+        .ui.buttons
+          =link_to "Log in", new_user_session_path, class:'ui button'
+          .or
+          =link_to "Sign up", new_user_registration_path, class:'ui button'
+      -else
+        .ui.vertical.menu
+          .ui.dropdown.item
+            =current_user.email
+            %i.dropdown.icon
+            .menu
+              %a.item Profile
+              %a.item Social
+              =link_to 'Log out', destroy_user_session_path, class:'item', method: :delete
+
+
+
