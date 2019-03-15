@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# Include logger
+logger = Logger.new(STDOUT)
+logger.info('Seeding database...')
+
+
+logger.info "Creating initial user"
+User.create(
+  email: "admin@admin.com",
+  password: "foobar"
+)
