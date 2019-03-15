@@ -1,2 +1,14 @@
-//= require_tree .
-//= require_self
+
+
+// Semantic UI styles
+@import 'semantic-ui';
+@import "semantic-ui/collections/menu";
+
+// Reset browser-agent stylesheets
+@import "reset";
+
+// Application layout styles
+@import "layouts/navbar";
+
+// Override styles
+@import "custom";

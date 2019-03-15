@@ -1,0 +1,33 @@
+.ui.segment.musirock_menu {
+  margin: 0 0 1rem 0;
+
+  .ui.vertical.menu .dropdown.item:not(.upward) .menu {
+    left:0;
+    top: 50px;
+  }
+
+  .ui.dropdown.item {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+  .ui.vertical.menu .dropdown.item > .icon {
+    line-height: 20px;
+  }
+}
+
+.musirock_menu {
+   .ui.placeholder.segment {
+     min-height: auto;
+   }
+
+  .ui.button {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+  }
+
+  .ui.buttons .or:before {
+    top: 57%;
+  }
+}
