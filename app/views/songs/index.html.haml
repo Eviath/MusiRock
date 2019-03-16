@@ -1,0 +1,11 @@
+.ui.container
+  %h1.ui.center.aligned.header Our songs list
+
+.ui.horizontal.segment.container
+  .ui.link.cards.four
+    =render @songs
+
+
+
+
+= link_to 'New Song', new_song_path

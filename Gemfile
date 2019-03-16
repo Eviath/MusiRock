@@ -19,7 +19,7 @@ gem "puma"
 gem "rack-canonical-host", "~> 0.2.3"
 gem "rails", "~> 5.2.2.1"
 gem "sass-rails", "~> 5.0"
-gem "sidekiq", ">= 4.2.0"
+# gem "sidekiq", ">= 4.2.0"
 gem "turbolinks", "~> 5"
 gem 'devise'
 gem 'semantic-ui-sass'
@@ -34,7 +34,7 @@ group :development do
   gem "guard", ">= 2.2.2", require: false
   gem "guard-livereload", require: false
   gem "guard-minitest", require: false
-  gem "letter_opener"
+  # gem "letter_opener"
   gem "listen", ">= 3.0.5"
   gem "overcommit", ">= 0.37.0", require: false
   gem "rack-livereload"

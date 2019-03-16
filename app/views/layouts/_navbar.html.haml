@@ -6,12 +6,14 @@
       %h1 MUSIROCK
 
     =active_link_to 'Home', root_path, class:'item'
-    %a.item
-      Featured
+    =active_link_to 'Featured', songs_path, class:'item'
     %a.item
       Collection
 
     .right.menu
+      .item
+        .ui
+          =link_to 'Add song', new_song_path, class:'ui button'
       .item
         .ui.icon.input
           %input{type:"text", placeholder:"Search..."}
@@ -19,11 +21,11 @@
 
       -if !user_signed_in?
         .ui.buttons
-          =link_to "Log in", new_user_session_path, class:'ui button'
+          =link_to "Log in", new_user_session_path, class:'ui button', id:'login_button', remote: true
           .or
-          =link_to "Sign up", new_user_registration_path, class:'ui button'
+          =link_to "Sign up", new_user_registration_path, class:'ui button', id:'register_button', remote: true
       -else
-        .ui.vertical.menu
+        .ui.menu
           .ui.dropdown.item
             =current_user.email
             %i.dropdown.icon

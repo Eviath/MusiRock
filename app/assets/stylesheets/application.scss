@@ -10,5 +10,10 @@
 // Application layout styles
 @import "layouts/navbar";
 
+// Application shared styles
+@import "shared/modal";
+
+// Application pages styles
+@import "pages/home";
 // Override styles
 @import "custom";

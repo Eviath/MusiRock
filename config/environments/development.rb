@@ -36,10 +36,14 @@ Rails.application.configure do
   # config.action_mailer.raise_delivery_errors = false
 
   # Ensure mailer works in development.
-  config.action_mailer.delivery_method = :letter_opener
-  config.action_mailer.raise_delivery_errors = true
+
+
   config.action_mailer.default_url_options = { host: "localhost:3000" }
   config.action_mailer.asset_host = "http://localhost:3000"
+  config.action_mailer.default_url_options = {:host => "localhost"}
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = false
+  config.action_mailer.raise_delivery_errors = false
 
   config.action_mailer.perform_caching = false
 
@@ -68,5 +72,5 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   # or, if you're using better_errors:
-  config.middleware.insert_before Rack::Lock, Rack::LiveReload
+  config.middleware.insert_before ActionDispatch::DebugExceptions, Rack::LiveReload, no_swf:true, live_reload_port: 35729
 end

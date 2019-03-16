@@ -1,0 +1,14 @@
+.card
+  .image
+    %img{:src => "#{url_for(song.thumbnail.attachment)}"}/
+  .content
+    %h5.center.aligned= song.title
+    .description
+      -#song description
+  .extra.content.center.aligned
+    =audio_tag url_for(song.song_file.attachment), controls: true
+  .extra.content
+    .ui.buttons.mini.three
+      = link_to 'Show', song , class:'button ui'
+      = link_to 'Edit', edit_song_path(song), class:'button ui basic yellow'
+      = link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' }, class:'button ui  red'

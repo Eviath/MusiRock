@@ -1,0 +1,28 @@
+
+.musi_rock_brand {
+  margin: 100px 0;
+}
+
+.index-header {
+  height: calc(100% - 360px);
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .ui {
+    &.header {
+      font-size: 2em;
+      font-weight: 300;
+    }
+    &.search {
+      margin: 50px auto;
+      width: min-content;
+
+      input {
+        width:400px;
+      }
+    }
+  }
+
+
+}
