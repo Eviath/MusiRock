@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "2.6.0"
+ruby "2.6.1"
 
 gem "haml-rails"
 gem "active_type", ">= 0.3.2"
@@ -24,7 +24,9 @@ gem "turbolinks", "~> 5"
 gem 'devise'
 gem 'semantic-ui-sass'
 
+
 group :development do
+  gem 'pry-rails'
   gem "annotate", ">= 2.5.0"
   gem "awesome_print"
   gem "better_errors"

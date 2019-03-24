@@ -18,4 +18,8 @@ class Song < ApplicationRecord
 
   has_one_attached :song_file
   has_one_attached :thumbnail
+
+  validates_presence_of :user, :title
+
+
 end

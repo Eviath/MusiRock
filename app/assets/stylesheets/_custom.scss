@@ -7,3 +7,56 @@
     width: 100%;
   }
 }
+
+
+// Modal
+.modal-ui {
+  box-shadow: rgba(1, 1, 1, 0.12) 0px 2px 4px 0px, rgba(1, 1, 1, 0.12) 0px 2px 10px 0px;
+
+  .header{
+    color: $musi-dark;
+  }
+  .form {
+    label {
+      color: $musi-dark;
+      &:hover{
+        color: $musi-dark;
+      }
+    }
+  }
+  .ui.form .field > label  {
+    color: $musi-dark;
+  }
+}
+
+
+
+// Devise modal shared links
+.devise-shared-links {
+  text-align: center;
+  text-transform: uppercase;
+
+  a {
+    padding: 15px 0;
+    transition: .3s;
+    color: $musi-green!important;
+    font-size: .8em;
+    text-decoration: none;
+    &:hover{
+      transition: .3s;
+      color: $musi-blue !important;
+    }
+  }
+}
+
+
+
+// MusiRock styled button
+.musi-button {
+  background: $musi-green !important;
+  &:hover{
+    transition: .3s;
+    color: #fff;
+    background: $musi-blue !important;
+  }
+}

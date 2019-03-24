@@ -15,6 +15,6 @@
 
 FactoryBot.define do
   factory :song do
-    
+    user
   end
 end

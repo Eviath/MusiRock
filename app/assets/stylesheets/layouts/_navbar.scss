@@ -1,5 +1,28 @@
 .ui.segment.musirock_menu {
+  background: transparent;
   margin: 0 0 1rem 0;
+
+  .left.menu {
+    h1 {
+      color : #fff;
+    }
+    a.item {
+      color: #fff;
+    }
+    .active.item {
+      border: 1px solid rgba(0, 0, 0, 0.07);
+    }
+  }
+
+  .right.menu {
+    .button {
+      font-weight: 300;
+      background: rgba(0, 0, 0, 0.05);
+      color: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.07);
+      border-radius: 5px;
+    }
+  }
 
   .ui.vertical.menu .dropdown.item:not(.upward) .menu {
     left:0;
@@ -28,6 +51,7 @@
   }
 
   .ui.buttons .or:before {
-    top: 57%;
+
+
   }
 }

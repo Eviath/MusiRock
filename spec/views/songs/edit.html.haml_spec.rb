@@ -1,8 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe "songs/edit", type: :view do
+  login_user
+
   before(:each) do
-    @song = assign(:song, Song.create!())
+    @song = assign(:song, @user.songs.create!(title: 'Nice song title'))
   end
 
   it "renders the edit song form" do
