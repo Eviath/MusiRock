@@ -15,6 +15,8 @@
 
 class Song < ApplicationRecord
   belongs_to :user
+  has_many :playlists
+  has_many :users, through: :playlists
 
   has_one_attached :song_file
   has_one_attached :thumbnail
