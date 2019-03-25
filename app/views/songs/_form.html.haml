@@ -1,5 +1,5 @@
-.ui.container.segment
-  = form_for @song, html: {class:'ui form' } do |f|
+.ui.container.segment.very.padded
+  = form_for @song, html: {class:'ui form musi-form' } do |f|
     - if @song.errors.any?
       #error_explanation
         %h2= "#{pluralize(@song.errors.count, "error")} prohibited this song from being saved:"
@@ -10,7 +10,7 @@
       .ui.labeled.input
         .ui.label
           = f.label :title
-        = f.text_field :title
+        = f.text_field :title, placeholder: 'Title of the new song'
 
     .field
       .ui.labeled.input
@@ -25,5 +25,5 @@
         = f.file_field :song_file
 
     .actions
-      = f.submit 'Save', class: 'ui button'
+      = f.submit 'Save', class: 'ui button musi-button'
 

@@ -8,6 +8,26 @@
   }
 }
 
+// Page container
+
+.page-container {
+  // White header
+  .white-header{
+    color: #fff;
+  }
+}
+
+
+// MusiRock form
+.musi-form {
+  div.ui.label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $musi-green;
+  }
+}
+
 
 // Modal
 .modal-ui {

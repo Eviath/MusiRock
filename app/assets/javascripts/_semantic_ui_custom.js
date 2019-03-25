@@ -37,3 +37,8 @@ $('.ui.search')
     minCharacters : 3
   })
   ;});
+
+$(document).on('ready turbolinks:load', function() {
+$('.ui.checkbox')
+  .checkbox()
+; });
