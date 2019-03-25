@@ -1,2 +1,16 @@
 - provide(:title, "Home")
-%p Find me in app/views/home/index.html.erb
+
+.ui.container.musi_rock_brand
+  %h1.ui.header.aligned.centered
+    MusiRock
+    .sub.header
+      Your Favorite Rock Music
+
+.ui.container.index-header
+  .ui.container
+    %h5.ui.header.aligned.centered What would you like listen to today?
+    .ui.search
+      .ui.icon.input
+        %input.prompt{:placeholder => "Search by titles, authors, collections..", :type => "text"}/
+        %i.search.icon
+      .results

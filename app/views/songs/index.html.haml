@@ -1,0 +1,16 @@
+.ui.aligned.centered.page-container
+  -if @songs.any?
+    %h1.ui.center.aligned.header.white-header Our songs list
+    .ui.container.new-song-action
+      .buttons
+        = link_to 'Add new song', new_song_path, class:'button ui musi-button'
+
+    .ui.horizontal.segment.very.padded
+      .ui.link.cards.six
+        =render @songs
+  -else
+    %h1.ui.center.aligned.header.white-header We dont have any songs yet! You can add one!
+
+
+
+

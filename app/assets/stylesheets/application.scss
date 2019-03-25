@@ -7,8 +7,17 @@
 // Reset browser-agent stylesheets
 @import "reset";
 
+@import "variables";
+
 // Application layout styles
 @import "layouts/navbar";
+
+// Application shared styles
+@import "shared/modal";
+
+// Application pages styles
+@import "pages/home";
+@import "pages/songs";
 
 // Override styles
 @import "custom";

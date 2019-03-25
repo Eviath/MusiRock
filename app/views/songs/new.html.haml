@@ -1,0 +1,9 @@
+.ui.container.page-container
+  .ui.huge.header.white-header.aligned.centered.very.padded
+    %h1 New song
+
+  .ui.horizontal.segment.container
+    = render 'form'
+
+  .ui.buttons
+    = link_to 'Back', songs_path, class:'ui button musi-button'
