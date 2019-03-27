@@ -5,6 +5,7 @@
 #  created_at :datetime         not null
 #  id         :bigint(8)        not null, primary key
 #  song_id    :bigint(8)
+#  title      :string
 #  updated_at :datetime         not null
 #  user_id    :bigint(8)
 #
