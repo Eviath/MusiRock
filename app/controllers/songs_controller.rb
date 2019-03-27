@@ -5,6 +5,8 @@ class SongsController < ApplicationController
   # GET /songs
   def index
     @songs = Song.all
+
+  @user_playlists = current_user.playlists
   end
 
   # GET /songs/1
@@ -44,6 +46,19 @@ class SongsController < ApplicationController
     @song.destroy
     redirect_to songs_url, notice: 'Song was successfully destroyed.'
   end
+
+  def playlistadd
+    @playlist = Playlist.find(params[:playlist_id])
+    @song = Song.find(params[:id])
+
+    @playlist.songs << @song
+
+
+    respond_to do |format|
+      format.js # actually means: if the client ask for js -> return file.js
+    end
+  end
+
 
   private
 

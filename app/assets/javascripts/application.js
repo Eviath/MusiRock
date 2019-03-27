@@ -20,3 +20,14 @@
 //= require semantic-ui
 
 
+$( document ).on('ready turbolinks:load', function() {
+  $(".playlist_select").on("change",function() {
+    let song = this.name;
+    $.ajax({
+      url: '/songs/ '+ song +'/playlistadd' ,
+      type: 'get',
+      data: {playlist_id: $(this).val()},
+      contentType: 'json'
+    });
+  });
+});

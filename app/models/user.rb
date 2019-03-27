@@ -32,5 +32,4 @@ class User < ApplicationRecord
   # Associations
   has_many :songs
   has_many :playlists
-  has_many :songs, through: :playlists
 end

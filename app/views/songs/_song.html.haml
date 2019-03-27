@@ -8,7 +8,17 @@
   .extra.content.center.aligned
     =audio_tag url_for(song.song_file.attachment), controls: true
   .extra.content
-    .ui.buttons.mini.three
+    .ui.buttons.mini.four
       = link_to 'Show', song , class:'button ui'
       = link_to 'Edit', edit_song_path(song), class:'button ui '
-      = link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' }, class:'button ui '
+      = link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' }, class:'button ui'
+
+  .extra.content
+    .ui.buttons.two.small
+      = select_tag "playlist_#{song.id}", options_from_collection_for_select(@user_playlists, 'id', 'title'), class:'button ui playlist_select', include_blank: '+', name: "#{song.id}"
+    %div{id: "button_add#{song.id}"}
+
+
+    %H2 Song is in these playlists
+    -@user_playlists.includes(:songs).where.not(songs: { id: song.id }).each do |p|
+      =p.title

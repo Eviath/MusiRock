@@ -16,3 +16,9 @@ User.create(
   email: "admin@admin.com",
   password: "foobar"
 )
+
+logger.info "Creating initial user playlists"
+User.first.playlists.create!(title: 'My first playlist')
+User.first.playlists.create!(title: 'My second playlist')
+User.first.playlists.create!(title: 'My third playlist')
+User.first.playlists.create!(title: 'My fourth playlist')

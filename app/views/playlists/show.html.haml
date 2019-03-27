@@ -1,0 +1,5 @@
+.ui.container.segment
+  =@playlist.title
+
+  -@playlist.songs.each do |s|
+    %li=link_to s.title, s

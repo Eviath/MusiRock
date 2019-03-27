@@ -1,0 +1,10 @@
+.ui.container.segment
+  =@user.email
+
+
+.ui.container.segment
+  .ui.header
+    %h2 User playlists
+    .ui.list
+      -@user.playlists.each do |p|
+        %li=link_to p.title, p

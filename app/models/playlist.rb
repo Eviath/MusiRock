@@ -20,7 +20,8 @@
 #  fk_rails_...  (user_id => users.id)
 #
 
+
 class Playlist < ApplicationRecord
   belongs_to :user
-  belongs_to :song
+  has_and_belongs_to_many :songs
 end
