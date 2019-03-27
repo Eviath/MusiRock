@@ -48,7 +48,7 @@ RSpec.describe SongsController, type: :controller do
 
   describe "GET #index" do
     it "returns a success response" do
-      user.songs.create!(title: title)
+      Song.create!(title: title, user: user)
       get :index, params: {}
       expect(response).to be_successful
     end

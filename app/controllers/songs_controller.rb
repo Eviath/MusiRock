@@ -23,7 +23,6 @@ class SongsController < ApplicationController
   # POST /songs
   def create
     @song = current_user.songs.build(song_params)
-
     if @song.save
       redirect_to @song, notice: 'Song was successfully created.'
     else
